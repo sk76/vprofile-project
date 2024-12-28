@@ -1,7 +1,7 @@
 services:
  vprodb:
   build:
-   context: ./Docker-files/db
+   context: ../Docker-files/db
   image: sandocker33/dbrepo
   container_name: vprodb
   ports:
@@ -25,7 +25,7 @@ services:
    - RABBITMQ_DEFAULT_PASS=guest
  vproapp:
   build:
-   context: ./Docker-files/app
+   context: ../Docker-files/app
   image: sandocker33/apprepo
   container_name: vproapp
   ports:
@@ -34,7 +34,7 @@ services:
    - vproappdata:/usr/local/tomcat/webapps
  vproweb:
   build:
-   context: ./Docker-files/web
+   context: ../Docker-files/web
   image: sandocker33/webrepo
   container_name: vproweb
   ports:
